@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface PLCRepository extends JpaRepository<Mqttlogs, Long> {
-    @Query("SELECT a.id, a.serverTimestamp, b.planta, a.grupo, b.descripcionGrupo, a.source, b.descripcionGrupo, a.value " +
+    @Query("SELECT a.id, a.serverTimestamp, b.planta, a.grupo, b.descripcionGrupo, a.source, b.descripcionTag, a.value " +
             "FROM Mqttlogs AS a " +
             "INNER JOIN DicDat AS b ON b.grupo = a.grupo AND b.fuente = a.source " +
             "AND b.planta = 'NATURAL' " +
