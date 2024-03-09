@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: ms-ayuda
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: '******'
+  sql:
+    init:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    open-in-view: false
+    defer-datasource-initialization: true
